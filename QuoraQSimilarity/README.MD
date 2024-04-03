@@ -21,11 +21,17 @@ Train.csv contains 5 columns : qid1, qid2, question1, question2, is_duplicate. T
 
 ### Some Exploratory Data Analysis Plots:
 
-1) Target Variable Distribution: ![target-distribution](https://github.com/PinakShome/Data-Science-Case-Studies/blob/main/QuoraQSimilarity/Images/Unknown1.png)
+1) Target Variable Distribution: 
 
-2) Unique and Repeated Questions : ![u-r](https://github.com/PinakShome/Data-Science-Case-Studies/blob/main/QuoraQSimilarity/Images/Unknown2.png)
+![target-distribution](https://github.com/PinakShome/Data-Science-Case-Studies/blob/main/QuoraQSimilarity/Images/Unknown1.png)
 
-3) Log- Histogram of question appearance counts : ![L-H](https://github.com/PinakShome/Data-Science-Case-Studies/blob/main/QuoraQSimilarity/Images/Unknown3.png)
+2) Unique and Repeated Questions : 
+
+![u-r](https://github.com/PinakShome/Data-Science-Case-Studies/blob/main/QuoraQSimilarity/Images/Unknown2.png)
+
+3) Log- Histogram of question appearance counts : 
+
+![L-H](https://github.com/PinakShome/Data-Science-Case-Studies/blob/main/QuoraQSimilarity/Images/Unknown3.png)
 
 4) Violin and Dist plots : ![V-D](https://github.com/PinakShome/Data-Science-Case-Studies/blob/main/QuoraQSimilarity/Images/Unknown5.png)
                            ![V-D2](https://github.com/PinakShome/Data-Science-Case-Studies/blob/main/QuoraQSimilarity/Images/Unknown4.png)
