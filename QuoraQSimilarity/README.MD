@@ -6,7 +6,7 @@ Over 100 million people visit Quora every month, so it's no surprise that many p
 
 ### Credits: Kaggle
 
-### Dataset Link : !(https://www.kaggle.com/c/quora-question-pairs)
+### Dataset Link : https://www.kaggle.com/c/quora-question-pairs
 
 ### Problem Statement :
 Identify which questions asked on Quora are duplicates of questions that have already been asked.
