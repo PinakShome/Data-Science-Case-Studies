@@ -19,7 +19,7 @@ Identify which questions asked on Quora are duplicates of questions that have al
 ### Data Overview:
 Train.csv contains 5 columns : qid1, qid2, question1, question2, is_duplicate. Total we have 404290 entries. Splitted data into train and test with 70% and 30%.
 
-###Some Exploratory Data Analysis Plots:
+### Some Exploratory Data Analysis Plots:
 
 1) Target Variable Distribution: ![target-distribution](https://github.com/PinakShome/Data-Science-Case-Studies/blob/main/QuoraQSimilarity/Images/Unknown1.png)
 
@@ -30,7 +30,9 @@ Train.csv contains 5 columns : qid1, qid2, question1, question2, is_duplicate. T
 4) Violin and Dist plots : ![V-D](https://github.com/PinakShome/Data-Science-Case-Studies/blob/main/QuoraQSimilarity/Images/Unknown5.png)
                            ![V-D2](https://github.com/PinakShome/Data-Science-Case-Studies/blob/main/QuoraQSimilarity/Images/Unknown4.png)
 
-5) Wordcloud : ![Wordcloud](https://github.com/PinakShome/Data-Science-Case-Studies/blob/main/QuoraQSimilarity/Images/Unknown6.png)
+5) Wordcloud : 
+
+![Wordcloud](https://github.com/PinakShome/Data-Science-Case-Studies/blob/main/QuoraQSimilarity/Images/Unknown6.png)
 
 6) Pairplots of Advanced Features: ![Pair-Plots](https://github.com/PinakShome/Data-Science-Case-Studies/blob/main/QuoraQSimilarity/Images/Unknown7.png)
 
@@ -70,7 +72,7 @@ Train.csv contains 5 columns : qid1, qid2, question1, question2, is_duplicate. T
 
   - Random Model (Basic + Advanced + TFIDF features) : Log Loss - 0.88
   - Logistic Regression w/ Hyperparameter Tuning ( Basic + Advanced + TFIDF features) - Best Predictor - 0.41
-    Logistic Regression Confusion matrix : ![CM](https://github.com/PinakShome/Data-Science-Case-Studies/blob/main/QuoraQSimilarity/Images/Unknown10.png)
+  - Logistic Regression Confusion matrix : ![CM](https://github.com/PinakShome/Data-Science-Case-Studies/blob/main/QuoraQSimilarity/Images/Unknown10.png)
   - XGBoost (Basic + Advanced + TFIDF) - 0.35
 
 ##### References:
