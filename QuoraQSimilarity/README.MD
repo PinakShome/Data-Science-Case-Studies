@@ -72,7 +72,7 @@ Train.csv contains 5 columns : qid1, qid2, question1, question2, is_duplicate. T
   - <b>token_sort_ratio</b> = sorting the tokens in string and then scoring fuzz_ratio.
   - <b>longest_substr_ratio</b> = len(longest common substring) / (min(len(q1_tokens), len(q2_tokens))
 
-##### Extracted Tf-Idf features for question1 and question2 
+#### Extracted Tf-Idf features for question1 and question2 
 
 ### Machine Learning Models:
 
