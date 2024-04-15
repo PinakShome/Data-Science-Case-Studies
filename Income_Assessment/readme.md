@@ -1,4 +1,4 @@
-#### Census Income Data Analysis and Modeling**
+#### Census Income Data Analysis and Modeling
 
 This project involves analyzing and modeling census income data to predict whether an individual's income exceeds $50,000 per year based on census data. This document outlines the process followed, including data cleaning, preprocessing, exploratory data analysis, and model building.
 
