@@ -21,7 +21,7 @@ Dynamic Pricing Strategy:
 
 - Optimize driver schedules based on predictive demand insights, thereby reducing overheads related to underutilized labor and increasing earnings during high-demand periods.
 
-#### Urban Planning and Traffic Contribution:
+##### Urban Planning and Traffic Contribution:
 
 - Provide data-driven insights to city planners and traffic management authorities to aid in the design of more efficient public transportation systems and traffic congestion mitigation.
 
