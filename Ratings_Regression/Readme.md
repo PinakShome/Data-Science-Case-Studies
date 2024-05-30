@@ -31,24 +31,25 @@ Steps included:
 4)Merging relevant tables: This formed a comprehensive dataset combining player attributes and ratings.
 
 ## Detailed Steps:
-    Data Loading:
 
-      1) Connected to the SQLite database.
-      2)Extracted tables including Player_Attributes and Player.
+### Data Loading:
 
-    Initial Data Cleaning:
+1) Connected to the SQLite database.
+2)Extracted tables including Player_Attributes and Player.
 
-      1)Dropped columns like id, player_fifa_api_id, and date.
-      2)Converted categorical variables (preferred_foot, attacking_work_rate, defensive_work_rate) to numeric values where appropriate.
+### Initial Data Cleaning:
 
-    Handling Null Values:
+1)Dropped columns like id, player_fifa_api_id, and date.
+2)Converted categorical variables (preferred_foot, attacking_work_rate, defensive_work_rate) to numeric values where appropriate.
+
+### Handling Null Values:
     
-      1)Removed rows with any null values.
-      2)Performed mean imputation for numeric columns and mode imputation for categorical columns.
+1)Removed rows with any null values.
+2)Performed mean imputation for numeric columns and mode imputation for categorical columns.
 
-    Merging Data:
+### Merging Data:
 
-      1)Merged Player_Attributes and Player tables on player_api_id.
+1)Merged Player_Attributes and Player tables on player_api_id.
 
 # Exploratory Data Analysis
 
@@ -85,6 +86,12 @@ The following models were implemented and compared:
 - Baseline Model: Mean of the training set target variable.
 - Preprocessing Pipeline: Included standard scaling for numeric features and one-hot encoding for categorical features.
 - Hyperparameter Tuning: Conducted for the Random Forest model using GridSearchCV.
+
+### Model Workflow Summary
+
+Picked three variations of linear models (Linear, Lasso and Ridge) pertaining to the fact that the dataset displayed linearity between features and the target variable. Since there was non linearity and complex relationships present as well (Referencing correlation matrix and Pearson-correlation values), I’ve additionally picked the random forest regressor and lastly neural nets to compare how well random forest is capturing the dynamics of relationships between all the variables (Given Feature Irrelevance). Since this dataset isn’t very high dimensional with over-complexity and has features that truly do not contribute to the target variable along with some complex relationships between features, Random forest may not perform significantly better than linear models. We’ll use neural networks to have a benchmark of Random Forest’ performance.
+
+
 
 # Results
 
