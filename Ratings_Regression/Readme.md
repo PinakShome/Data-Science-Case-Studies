@@ -22,7 +22,7 @@ All higher value float64 variables contribute to a higher target variable rating
 There are several instances of rows where the target variable values are higher even though most of their ‘float64’ magnitudes are lower, which tell us that the features are not necessarily strong indicators of the target. This makes it suitable for
 analyzing how models would learn on datasets with no clear patterns and help us understand the nuances of how we can leverage model architectures when there is no clear-cut trends present.
 
-# Preprocessing
+# PREPROCESSING
 Steps included:
 
 1)Dropping rows with null values: To ensure the quality of the data.
@@ -40,7 +40,7 @@ Steps included:
 ### Initial Data Cleaning:
 
 1)Dropped columns like id, player_fifa_api_id, and date.
-2)Converted categorical variables (preferred_foot, attacking_work_rate, defensive_work_rate) to numeric values where appropriate.
+2)Converted categorical variables (preferred_foot, attacking_work_rate, defensive_work_rate) to numeric values where appropriate based on domain knowledge.
 
 ### Handling Null Values:
     
@@ -65,14 +65,14 @@ EDA involved visualizing the distributions of player attributes and their relati
 3)Scatter Plots: For numeric features against overall rating.
 4)Bar Plots: For categorical features like preferred_foot, attacking_work_rate, and defensive_work_rate.
 
-# Feature Engineering
+# FEATURE ENGINEERING
 
 Steps included:
 
 1)Creating 'age' from 'birthday': To capture the effect of a player's age on their performance.
 2)Dropping less significant columns: Columns like birthday, player_name, and other IDs were dropped after extraction of useful features.
 
-# Modeling
+# MODELING
 
 The following models were implemented and compared:
 
@@ -85,13 +85,13 @@ The following models were implemented and compared:
 ## Model Workflow
 - Baseline Model: Mean of the training set target variable.
 - Preprocessing Pipeline: Included standard scaling for numeric features and one-hot encoding for categorical features.
-- Hyperparameter Tuning: Conducted for the Random Forest model using GridSearchCV.
+- Hyperparameter Tuning: Conducted for the Random Forest model AND Neural Networks
 
 ### Model Workflow Summary
 
 Picked three variations of linear models (Linear, Lasso and Ridge) pertaining to the fact that the dataset displayed linearity between features and the target variable. Since there was non linearity and complex relationships present as well (Referencing correlation matrix and Pearson-correlation values), I’ve additionally picked the random forest regressor and lastly neural nets to compare how well random forest is capturing the dynamics of relationships between all the variables (Given Feature Irrelevance). Since this dataset isn’t very high dimensional with over-complexity and has features that truly do not contribute to the target variable along with some complex relationships between features, Random forest may not perform significantly better than linear models. We’ll use neural networks to have a benchmark of Random Forest’ performance.
 
-# Results
+# RESULTS
 
 - Baseline Model (Mean): MSE = 37.736
 - Linear Regression: MSE = 3.410
@@ -101,14 +101,14 @@ Picked three variations of linear models (Linear, Lasso and Ridge) pertaining to
 - Random Forest (Tuned): MSE = 1.830
 - Neural Networks: MSE: 0.634445 and Achieved the best performance due to their ability to capture complex relationships.
 
-# Conclusion
+# CONCLUSION
 
 - Base Linear regression and Ridge Regression perform very similar to random forest. Neural Nets perform best due to their ability to learn patterns through their hidden layers even if there is a high degree of feature irrelevance.
 - Lasso Regression performs poorly compared to the other linear models because of its feature elimination process in a dataset with low feature relevance.
 - There is a good deal of linearity in the dataset, which explains the enhanced performance of linear models compared to base-mean model.
 - Random Forest does not outperform the linear models due to feature irrelevance present, along with lack of very high dimensionality and dataset size which prevents it from learning the dataset optimally.
 
-# Recommendations
+# RECOMMENDATION
 
 - For small datasets with mid to low dimensionality with significant presence of linearity even with collinear features existing, linear models should be preferred over more complex models if a small margin error of accuracy is acceptable.
 - For high dimensional datasets with complex features relationships, more complex models like Random Forest and Neural Nets should be prioritized.
