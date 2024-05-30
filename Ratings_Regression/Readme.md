@@ -1,7 +1,7 @@
 # INTRODUCTION
 This case study explores the intricate details of how machine learning models differ in making predictions when the dataset used has characteristics which are partially (but not completely) favorable to all the models being implemented. Since a soccer database is being used here, it has significance in understanding how analytics of different characteristics can have an impact on the game. But mainly, this aims to provide a concise model selection recommendation when the features of the dataset don’t clearly fit the criteria of any specific model. It provides insights into what models would be most suited for a given task with computational and metric prediction accuracy constraints in mind.
 
-# Table of Contents 
+# TABLE OF CONTENTS
 
 - Dataset Description
 - Preprocessing
@@ -91,8 +91,6 @@ The following models were implemented and compared:
 
 Picked three variations of linear models (Linear, Lasso and Ridge) pertaining to the fact that the dataset displayed linearity between features and the target variable. Since there was non linearity and complex relationships present as well (Referencing correlation matrix and Pearson-correlation values), I’ve additionally picked the random forest regressor and lastly neural nets to compare how well random forest is capturing the dynamics of relationships between all the variables (Given Feature Irrelevance). Since this dataset isn’t very high dimensional with over-complexity and has features that truly do not contribute to the target variable along with some complex relationships between features, Random forest may not perform significantly better than linear models. We’ll use neural networks to have a benchmark of Random Forest’ performance.
 
-
-
 # Results
 
 - Baseline Model (Mean): MSE = 37.736
@@ -101,7 +99,7 @@ Picked three variations of linear models (Linear, Lasso and Ridge) pertaining to
 - Lasso Regression: MSE = 6.505
 - Random Forest Regressor: MSE = 1.841
 - Random Forest (Tuned): MSE = 1.830
-- Neural Networks: Achieved the best performance due to their ability to capture complex relationships.
+- Neural Networks: MSE: 0.634445 and Achieved the best performance due to their ability to capture complex relationships.
 
 # Conclusion
 
@@ -109,7 +107,6 @@ Picked three variations of linear models (Linear, Lasso and Ridge) pertaining to
 - Lasso Regression performs poorly compared to the other linear models because of its feature elimination process in a dataset with low feature relevance.
 - There is a good deal of linearity in the dataset, which explains the enhanced performance of linear models compared to base-mean model.
 - Random Forest does not outperform the linear models due to feature irrelevance present, along with lack of very high dimensionality and dataset size which prevents it from learning the dataset optimally.
- 
 
 # Recommendations
 
