@@ -25,62 +25,62 @@ analyzing how models would learn on datasets with no clear patterns and help us 
 # PREPROCESSING
 Steps included:
 
-1)Dropping rows with null values: To ensure the quality of the data.
-2)Mean imputation for numeric features and mode imputation for categorical features: This was done for each player's repeated instances.
-3)Converting the 'date' column to age: Since age is more relevant to player performance.
-4)Merging relevant tables: This formed a comprehensive dataset combining player attributes and ratings.
+- Dropping rows with null values: To ensure the quality of the data.
+- Mean imputation for numeric features and mode imputation for categorical features: This was done for each player's repeated instances.
+- Converting the 'date' column to age: Since age is more relevant to player performance.
+- Merging relevant tables: This formed a comprehensive dataset combining player attributes and ratings.
 
 ## Detailed Steps:
 
 ### Data Loading:
 
-1) Connected to the SQLite database.
-2)Extracted tables including Player_Attributes and Player.
+- Connected to the SQLite database.
+- Extracted tables including Player_Attributes and Player.
 
 ### Initial Data Cleaning:
 
-1)Dropped columns like id, player_fifa_api_id, and date.
-2)Converted categorical variables (preferred_foot, attacking_work_rate, defensive_work_rate) to numeric values where appropriate based on domain knowledge.
+- Dropped columns like id, player_fifa_api_id, and date.
+- Converted categorical variables (preferred_foot, attacking_work_rate, defensive_work_rate) to numeric values where appropriate based on domain knowledge.
 
 ### Handling Null Values:
     
-1)Removed rows with any null values.
-2)Performed mean imputation for numeric columns and mode imputation for categorical columns.
+- Removed rows with any null values.
+- Performed mean imputation for numeric columns and mode imputation for categorical columns.
 
 ### Merging Data:
 
-1)Merged Player_Attributes and Player tables on player_api_id.
+- Merged Player_Attributes and Player tables on player_api_id.
 
 # Exploratory Data Analysis
 
 EDA involved visualizing the distributions of player attributes and their relationships with the overall rating. Key observations included:
 
-1)Linearity and collinearity: Significant linearity was observed between some features and the target variable.
-2)Anomalies: Instances where higher attribute values did not necessarily lead to higher ratings.
+- Linearity and collinearity: Significant linearity was observed between some features and the target variable.
+- Anomalies: Instances where higher attribute values did not necessarily lead to higher ratings.
 
 ## Visualizations:
 
-1)Histograms: For overall rating and other numeric features.
-2)Correlation Matrix: Heatmap showing the correlations between different features.
-3)Scatter Plots: For numeric features against overall rating.
-4)Bar Plots: For categorical features like preferred_foot, attacking_work_rate, and defensive_work_rate.
+- Histograms: For overall rating and other numeric features.
+- Correlation Matrix: Heatmap showing the correlations between different features.
+- Scatter Plots: For numeric features against overall rating.
+- Bar Plots: For categorical features like preferred_foot, attacking_work_rate, and defensive_work_rate.
 
 # FEATURE ENGINEERING
 
 Steps included:
 
-1)Creating 'age' from 'birthday': To capture the effect of a player's age on their performance.
-2)Dropping less significant columns: Columns like birthday, player_name, and other IDs were dropped after extraction of useful features.
+- Creating 'age' from 'birthday': To capture the effect of a player's age on their performance.
+- Dropping less significant columns: Columns like birthday, player_name, and other IDs were dropped after extraction of useful features.
 
 # MODELING
 
 The following models were implemented and compared:
 
-1)Linear Regression
-2)Ridge Regression
-3)Lasso Regression
-4)Random Forest Regressor
-5)Neural Networks
+- Linear Regression
+- Ridge Regression
+- Lasso Regression
+- Random Forest Regressor
+- Neural Networks
 
 ## Model Workflow
 - Baseline Model: Mean of the training set target variable.
@@ -116,11 +116,3 @@ Picked three variations of linear models (Linear, Lasso and Ridge) pertaining to
 - Neural Networks are also significantly more computationally expensive as compared to RF models, so unless feature irrelevance is very high, RF could still give us very similar performance.
 - For very sparse datasets, Neural Networks will outperform Random Forest models and hence should be prioritized if complex models are being used
 - For small datasets, complex models do not generalize well beyond training data, so if scoring metrics are not a very huge concern and computing resources are limited, simpler linear models make a better choice.
-
-
-
-
-
-
-
-
