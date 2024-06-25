@@ -44,7 +44,6 @@ This is a multi-label classification problem where each question can have multip
 ## Analysis of Tags
 
 - Total number of unique tags: 42,048
-- Distribution of the number of times a tag appeared in the dataset.
 - The top 20 tags were visualized.
 
 # Preprocessing and Feature Engineering
